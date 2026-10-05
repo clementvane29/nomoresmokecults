@@ -17,6 +17,54 @@
 
 ---
 
+#### Global Dossier 02 (Agro-Mesías & Conespiritualidad EE.UU. — EN VIVO)
+> 🚨 NEW: Agro-Messiahs and Post-Doom Conspirituality
+> 
+> The Lucrative Business of Climate Fatalism and Soil Panaceas.
+> 
+> Forensic investigation by Clement Vane:
+> https://clementvane.substack.com/p/agro-messiahs-and-post-doom-conspirituality
+> 
+> #Ecology #RegenerativeAg #Climate
+
+---
+
+#### Global Dossier 03 (Feudalismo en Eco-Aldeas Europeas — EN VIVO)
+> 🚨 NEW: The Ecovillage Feudalists
+> 
+> Anthroposophic Dogma, Feudal Land-Tithing, and the Subjugation of Degrowth in Europe.
+> 
+> Forensic investigation by Clement Vane:
+> https://clementvane.substack.com/p/the-ecovillage-feudalists-anthroposophic
+> 
+> #Degrowth #Ecology #Demeter
+
+---
+
+#### Global Dossier 04 (Carteles Enteogénicos en América Latina — EN VIVO)
+> 🚨 NEW: The Entheogen Cartels
+> 
+> Neochamanism, Wellness Enclaves, and Spiritual Extractivism in Latin America.
+> 
+> Forensic investigation by Clement Vane:
+> https://clementvane.substack.com/p/the-entheogen-cartels-neochamanism
+> 
+> #Ayahuasca #Yage #SpiritualColonialism
+
+---
+
+#### Global Dossier 05 (Estafas de Frontera: Argentina, Magreb & Patagonia — EN VIVO)
+> 🚨 NEW: The Frontier Grifters
+> 
+> Biodecoding in the Pampas, Desert Mirages in the Maghreb, and Eco-Libertarian Land Scams in Patagonia.
+> 
+> Forensic investigation by Clement Vane:
+> https://clementvane.substack.com/p/the-frontier-grifters-biodecoding
+> 
+> #Patagonia #Chequeado #CIPERChile
+
+---
+
 #### Post 1 (Lanzamiento Nuclear — Ensayo 10)
 > 🚨 NEW ESSAY: The Guru’s Hostage: The Instrumentalization of Childhood in the Service of Ecological Grandiosity.
 > 

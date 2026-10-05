@@ -26,7 +26,11 @@ NoMoreSmokeCults/
 ├── investigations/                     # Expedientes y series de investigación pública
 │   ├── GLOBAL_INVESTIGATION_ROSTER.md  # Inteligencia Global: Perfiles, Modus Operandi y Fuentes
 │   ├── global_dossiers/                # Serie de Dossiers Comparativos Internacionales
-│   │   └── 01_The_Architecture_of_Modern_Eco_Cults.md
+│   │   ├── 01_The_Architecture_of_Modern_Eco_Cults.md
+│   │   ├── 02_Agro_Messiahs_and_Post_Doom_Conspirituality.md
+│   │   ├── 03_The_Ecovillage_Feudalists_and_Anthroposophy.md
+│   │   ├── 04_The_Entheogen_Cartels_and_Spiritual_Extractivism.md
+│   │   └── 05_The_Frontier_Grifters_Biodecoding_Desert_Mirages_Patagonia.md
 │   └── joe_brewer/                     # Caso Benchmark: Joseph Allen Brewer (Earth Regenerators)
 │       ├── 01_The_Pseudoscience_of_Managing_Planetary_Collapse.md
 │       ├── 02_The_Dandelion_Strategy_and_Bioregional_Learning_Centers.md
@@ -57,7 +61,7 @@ NoMoreSmokeCults/
 
 Los ensayos de investigación se publican bajo la autoría de **Clement Vane** (*Independent Scottish environmental philosopher & political ecology essayist*):
 
-* **Substack Principal:** [clementvane.substack.com](https://clementvane.substack.com) (11 Ensayos en vivo)
+* **Substack Principal:** [clementvane.substack.com](https://clementvane.substack.com) (15 Ensayos en vivo)
 * **RSS Feed Canónico:** `https://clementvane.substack.com/feed`
 * **X / Twitter:** [@clementvane](https://x.com/clementvane) (Canal automatizado vía Buffer GraphQL)
 * **Reddit:** [u/ClementVane](https://www.reddit.com/user/ClementVane/)

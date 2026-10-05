@@ -192,21 +192,32 @@ def publish_to_buffer(text, mode="shareNow"):
     with urllib.request.urlopen(req) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
-def main():
-    filepath = "/home/juan/Datos/Datos Juan/ProyectosSoftware/NoMoreSmokeCults/investigations/global_dossiers/01_The_Architecture_of_Modern_Eco_Cults.md"
+def publish_single_dossier(filepath, tweet_summary=""):
     url = publish_to_substack(filepath)
     if not url:
-        url = "https://clementvane.substack.com/p/the-architecture-of-modern-eco-cults"
+        print(f"[SKIP/EXISTING] No new post published for {os.path.basename(filepath)}")
+        return
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+    raw_title = title_match.group(1).strip() if title_match else os.path.basename(filepath)
+
+    # Clean short title for Twitter
+    short_title = raw_title.split(':')[0]
 
     tweet_text = (
-        "🚨 NEW: The Architecture of Modern Eco-Cults\n\n"
-        "How Post-Doom Prophets, Neo-Shamans, and Green Grifters Weaponize Planetary Crisis.\n\n"
-        "A forensic taxonomy by Clement Vane:\n"
+        f"🚨 NEW: {short_title}\n\n"
+        f"{tweet_summary if tweet_summary else 'Forensic investigation & political ecology by Clement Vane:'}\n"
         f"{url}\n\n"
-        "#Ecology #PostDoom #Climate"
+        "#Ecology #RegenerativeAg #Climate"
     )
 
-    print("\n[BUFFER] Despachando a Twitter (@clementvane)...")
+    if len(tweet_text) > 280:
+        tweet_text = f"🚨 NEW: {short_title}\n\n{url}\n\n#Ecology #Climate"
+
+    print(f"\n[BUFFER] Despachando a Twitter (@clementvane)... (Len: {len(tweet_text)})")
     try:
         res = publish_to_buffer(tweet_text, mode="shareNow")
         post_data = res.get("data", {}).get("createPost", {})
@@ -219,5 +230,16 @@ def main():
     except Exception as e:
         print(f"--> [BUFFER EXCEPTION]: {e}")
 
+def main():
+    if len(sys.argv) > 1:
+        target_path = sys.argv[1]
+        publish_single_dossier(target_path)
+    else:
+        dossier_dir = "/home/juan/Datos/Datos Juan/ProyectosSoftware/NoMoreSmokeCults/investigations/global_dossiers"
+        files = sorted([os.path.join(dossier_dir, f) for f in os.listdir(dossier_dir) if f.endswith(".md")])
+        for fp in files:
+            publish_single_dossier(fp)
+
 if __name__ == "__main__":
     main()
+

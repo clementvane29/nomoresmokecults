@@ -60,6 +60,30 @@ Para maximizar el impacto de las publicaciones de Clement Vane y llegar a las co
 > **Texto de acompañamiento:**  
 > *"From post-doom fatalism and $8,000 unregulated entheogen retreats to feudal land-tithing and ReFi crypto matching rounds: a comprehensive global taxonomy by Clement Vane examining how charismatic eco-grifters convert existential panic into financial extraction, deploy DARVO against civil audits, and evade local governance."*
 
+#### Plantilla D: Para r/RegenerativeAg, r/Agriculture, r/Skeptic (Dossier Global 02)
+> **Título:** *Agro-Messiahs and Post-Doom Conspirituality: The Lucrative Business of Climate Fatalism and Soil Panaceas*  
+> **Link:** https://clementvane.substack.com/p/agro-messiahs-and-post-doom-conspirituality  
+> **Texto de acompañamiento:**  
+> *"Citing peer-reviewed biogeochemistry (Schlesinger 2020) and tracking the conspiritality pipeline from raw milk to sovereign-citizen ranch enclaves: Clement Vane deconstructs the biophysical dishonesty of 'infinite soil carbon drawdown' sold to finance $15,000 survival bunkers and exploit uncompensated youth labor."*
+
+#### Plantilla E: Para r/Degrowth, r/Ecovillages, r/Anarchism (Dossier Global 03)
+> **Título:** *The Ecovillage Feudalists: Anthroposophic Dogma, Feudal Land-Tithing, and the Subjugation of Degrowth in Europe*  
+> **Link:** https://clementvane.substack.com/p/the-ecovillage-feudalists-anthroposophic  
+> **Texto de acompañamiento:**  
+> *"How legitimate European décroissance movements are hijacked by autocratic patriarchs using Steiner's Demeter esotericism, medical neglect, and 'feudal land-tithing' (surrendering private equity while the patriarch owns the freehold). Drawing on official MIVILUDES reports and investigative journalism."*
+
+#### Plantilla F: Para r/Ayahuasca, r/Psychedelics, r/Anthropology (Dossier Global 04)
+> **Título:** *The Entheogen Cartels: Neochamanism, Wellness Enclaves, and Spiritual Extractivism in Latin America*  
+> **Link:** https://clementvane.substack.com/p/the-entheogen-cartels-neochamanism  
+> **Texto de acompañamiento:**  
+> *"Exposing the $8,000 tourist retreat industry in Tulum, Minca, and Putumayo: where foreign facilitators capture >90% margins, tokenize indigenous elders, evade host tax authorities via Wise/crypto, and cause acute harm. Backed by ONIC, UMIYAC, and Chacruna Institute documentation."*
+
+#### Plantilla G: Para r/Patagonia, r/Chile, r/LatinAmerica (Dossier Global 05)
+> **Título:** *The Frontier Grifters: Biodecoding in the Pampas, Desert Mirages in the Maghreb, and Eco-Libertarian Land Scams in Patagonia*  
+> **Link:** https://clementvane.substack.com/p/the-frontier-grifters-biodecoding  
+> **Texto de acompañamiento:**  
+> *"From criminal biodecoding prosecutions in Argentina to fossil aquifer draining in Tunisia and illegal 'loteos brujos' destroying temperate rainforests in Chilean Patagonia: a deep dive into how crisis-profiteers seek peripheral frontiers to build privatized collapse fiefdoms."*
+
 ---
 
 ### 3. ESPACIOS ADICIONALES PARA MAXIMIZAR EL ALTAVOZ DE FORMA AUTOMÁTICA
