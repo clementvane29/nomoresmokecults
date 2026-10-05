@@ -93,22 +93,23 @@ Before establishing the international comparative roster, the operational profil
 
 ---
 
-## 04. COLOMBIA: ECO-EXPAT EXTRACTIONISM & PREDATORY YAGÉ SYNDICATES
+## 04. COLOMBIA: COMMERCIALIZED YAGÉ TOURISM CARTELS & PREDATORY WELLNESS RETREATS (MINCA, SIERRA NEVADA & PUTUMAYO)
 
 * **Archetypes & Focal Figures:**
-  - *Nomadic Western "Visionaries" (Barichara, Minca, Sierra Nevada de Santa Marta):* Expatriates arriving in historic, fragile ecosystems, leveraging their white privilege and anglosaxon currency advantage to proclaim themselves "stewards" and "educators" of the territory.
-  - *Commercialized Yagé Ceremonial Networks:* Urban and rural circles blending indigenous Amazonian medicine with California-style New Age coaching and crypto-finance.
+  - *Commercialized Yagé Retreat Networks & Neo-Shamanic Hubs:* Foreign facilitators and urban operators establishing unregulated "healing centers" in Minca, the lower foothills of the Sierra Nevada de Santa Marta, and the upper Putumayo river basin.
+  - *Spiritual Bypassing Wellness Enclaves:* Expatriate retreat operators marketing indigenous Amazonian and indigenous Arhuaco/Kogui traditions to high-paying international tourists ($1,500–$4,000 per retreat) without lineage endorsement or communal accountability.
 * **Modus Operandi & Epistemic Trap:**
-  - Co-opting the misery or historical heritage of local communities as a theatrical backdrop to raise hundreds of thousands of dollars on international crowdfunding platforms.
-  - Treating Colombia as an exotic, lawless laboratory where foreign grifters can operate without the professional licensing, labor laws, or educational accreditations required in their home countries.
-  - The "Indigenous Lineage" grift: claiming private conversations with ancestral spirits or paying an elder for a photo-op to claim divine mandate and immunity from local civil law.
+  - Exploitation of ancestral entheogens (Yagé/Ayahuasca) as instant "shortcuts" to psychological healing, combined with California-style biohacking and coaching jargon.
+  - Manufacturing an illusion of ancient authenticity by hiring disenfranchised indigenous individuals as ceremonial tokens, while the foreign or urban promoter retains over 90% of the financial margin.
+  - Using spiritual vulnerability and deep psychological dissociation to dissuade participants from questioning safety measures, basic medical hygiene, or legal permits.
 * **Harm Profile:**
-  - Disdain and delegitimization of local peasant (*campesino*) wisdom and grassroots ecological struggles.
-  - Creation of illegal, unaccredited "forest schools" that isolate foreign and local children from the certified educational system.
-  - Smear campaigns and economic retaliation against local female founders and community defenders who insist on formal contracts and transparency.
+  - Severe psychological crises, psychoses, and documented sexual assaults occurring while participants are fully incapacitated under the influence of strong entheogens without certified medical supervision.
+  - Complete evasion of Colombian tourism, health, and tax regulations (Superintendencia de Industria y Comercio, DIAN, and Ministerio de Salud), routing payments through international PayPal, Wise, or cryptocurrency accounts.
+  - Cultural bastardization and epistemic extractivism: claiming ancestral authority while disregarding traditional governance structures of the Cabildos Indígenas (OPIAC, CIT).
 * **Key Public Evidence & Documentation Trails:**
-  - Expelled community testimonials and environmental audit reports in Santander and Magdalena.
-  - Public corporate records from Cámara de Comercio regarding foreign-owned S.A.S. entities operating informal fundraising schemes.
+  - Declarations and communiqués from the *Organización Nacional Indígena de Colombia* (ONIC) and the *Unión de Médicos Indígenas Yageceros de la Amazonía Colombiana* (UMIYAC) denouncing commercialization, spiritual tourism, and fake shamans.
+  - Investigative reports in Colombian national media (*Revista Semana*, *El Espectador*, *El Tiempo*) on foreign fatalities and sexual abuse cases in clandestine wellness retreats in Santa Marta and Putumayo.
+  - Academic studies: Caicedo-Fernández (2015), *Yagé y Turismo Chamánico en Colombia: Entre la mercantilización y la revitalización cultural*.
 
 ---
 
