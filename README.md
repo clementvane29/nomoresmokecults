@@ -24,6 +24,7 @@ En la era del colapso ecológico y la ansiedad climática, proliferan figuras ca
 NoMoreSmokeCults/
 ├── README.md                           # Manifiesto y guía general del observatorio
 ├── investigations/                     # Expedientes y series de investigación pública
+│   ├── GLOBAL_INVESTIGATION_ROSTER.md  # Inteligencia Global: Perfiles, Modus Operandi y Fuentes
 │   └── joe_brewer/                     # Caso: Joseph Allen Brewer (Earth Regenerators / BLCs)
 │       ├── 01_The_Pseudoscience_of_Managing_Planetary_Collapse.md
 │       ├── 02_The_Dandelion_Strategy_and_Bioregional_Learning_Centers.md
