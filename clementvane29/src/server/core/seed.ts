@@ -148,15 +148,37 @@ export async function seedCommunity(subredditName: string = 'NoMoreSmokeCults'):
   let count = 0;
   const errors: string[] = [];
 
+  // Fetch recent posts to skip duplicates
+  let existingTitles = new Set<string>();
+  try {
+    const recentPosts = await reddit.getNewPosts({ subredditName: cleanSubreddit, limit: 25 });
+    existingTitles = new Set(recentPosts.map((p) => p.title.trim()));
+    console.log(`[Devvit Seed] Found ${existingTitles.size} existing posts in r/${cleanSubreddit}.`);
+  } catch (err) {
+    console.warn(`[Devvit Seed] Could not fetch existing posts, will proceed:`, err);
+  }
+
   for (const post of FOUNDATIONAL_POSTS) {
+    if (existingTitles.has(post.title.trim())) {
+      console.log(`[Devvit Seed] Skipping existing post: "${post.title}"`);
+      count++;
+      continue;
+    }
+
     try {
       console.log(`[Devvit Seed] Submitting: "${post.title}"`);
-      const submission = await reddit.submitPost({
+      const payload: any = {
         subredditName: cleanSubreddit,
         title: post.title,
         text: post.text,
-        url: post.url,
-      });
+      };
+
+      // Only include url if explicitly defined and non-empty (to avoid BAD_URL error for self-posts)
+      if (post.url && post.url.trim() !== '') {
+        payload.url = post.url.trim();
+      }
+
+      const submission = await reddit.submitPost(payload);
       console.log(`[Devvit Seed] Success! Created post ID: ${submission.id}`);
       count++;
     } catch (err: any) {
@@ -166,7 +188,7 @@ export async function seedCommunity(subredditName: string = 'NoMoreSmokeCults'):
     }
   }
 
-  console.log(`[Devvit Seed] Complete. Created ${count}/${FOUNDATIONAL_POSTS.length} posts.`);
+  console.log(`[Devvit Seed] Complete. Active posts: ${count}/${FOUNDATIONAL_POSTS.length}.`);
   return {
     success: errors.length === 0,
     count,

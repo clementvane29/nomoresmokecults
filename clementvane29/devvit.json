@@ -33,11 +33,25 @@
         "endpoint": "/internal/menu/post-create"
       },
       {
-        "label": "Seed Foundational Posts",
+        "label": "Auto-Configure Subreddit (Rules, Flairs, AutoMod)",
+        "description": "Programmatically apply all 6 rules, 10 flairs, and AutoMod",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/auto-configure"
+      },
+      {
+        "label": "Seed Missing Posts (Manifesto & Whistleblower)",
         "description": "Publish the 5 baseline manifesto and evidence posts",
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/seed-community"
+      },
+      {
+        "label": "Run Complete Setup & Seed",
+        "description": "One-click: rules, flairs, automod, and 5 foundational posts",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/complete-setup-and-seed"
       }
     ]
   },
