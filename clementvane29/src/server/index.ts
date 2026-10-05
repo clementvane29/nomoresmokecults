@@ -8,6 +8,8 @@ import { triggers } from './routes/triggers';
 import { publishRoute } from './routes/publish';
 import { appRouter } from './trpc';
 import { createContext } from './context';
+import { configureCommunity } from './core/setup';
+import { seedCommunity } from './core/seed';
 
 const app = new Hono();
 
@@ -35,3 +37,16 @@ serve({
   createServer: createServer,
   port: getServerPort(),
 });
+
+// Run automated community setup and seeding on launch
+setTimeout(async () => {
+  try {
+    console.log('[Devvit Auto-Launch] Initiating full community setup and seeding...');
+    const configResult = await configureCommunity('NoMoreSmokeCults');
+    console.log('[Devvit Auto-Launch] Configuration result:', JSON.stringify(configResult));
+    const seedResult = await seedCommunity('NoMoreSmokeCults');
+    console.log('[Devvit Auto-Launch] Seed result:', JSON.stringify(seedResult));
+  } catch (error) {
+    console.error('[Devvit Auto-Launch Error]:', error);
+  }
+}, 1500);
