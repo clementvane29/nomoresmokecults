@@ -48,3 +48,15 @@ publishRoute.post('/submit', async (c) => {
     );
   }
 });
+
+publishRoute.all('/seed', async (c) => {
+  try {
+    const { seedCommunity } = await import('../core/seed');
+    const result = await seedCommunity('NoMoreSmokeCults');
+    return c.json(result, result.success ? 200 : 500);
+  } catch (error: any) {
+    console.error('[Publish Seed Error]:', error);
+    return c.json({ success: false, error: error?.message || error }, 500);
+  }
+});
+

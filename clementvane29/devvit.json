@@ -1,6 +1,9 @@
 {
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
   "name": "clementvane29",
+  "dev": {
+    "subreddit": "NoMoreSmokeCults"
+  },
   "post": {
     "dir": "dist/client",
     "entrypoints": {
@@ -28,6 +31,13 @@
         "location": "subreddit",
         "forUserType": "moderator",
         "endpoint": "/internal/menu/post-create"
+      },
+      {
+        "label": "Seed Foundational Posts",
+        "description": "Publish the 5 baseline manifesto and evidence posts",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/seed-community"
       }
     ]
   },
