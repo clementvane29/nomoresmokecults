@@ -25,7 +25,9 @@ NoMoreSmokeCults/
 ├── README.md                           # Manifiesto y guía general del observatorio
 ├── investigations/                     # Expedientes y series de investigación pública
 │   ├── GLOBAL_INVESTIGATION_ROSTER.md  # Inteligencia Global: Perfiles, Modus Operandi y Fuentes
-│   └── joe_brewer/                     # Caso: Joseph Allen Brewer (Earth Regenerators / BLCs)
+│   ├── global_dossiers/                # Serie de Dossiers Comparativos Internacionales
+│   │   └── 01_The_Architecture_of_Modern_Eco_Cults.md
+│   └── joe_brewer/                     # Caso Benchmark: Joseph Allen Brewer (Earth Regenerators)
 │       ├── 01_The_Pseudoscience_of_Managing_Planetary_Collapse.md
 │       ├── 02_The_Dandelion_Strategy_and_Bioregional_Learning_Centers.md
 │       ├── 03_Green_Saviorism_and_the_Myth_of_the_Living_Laboratory.md
@@ -37,7 +39,8 @@ NoMoreSmokeCults/
 │       ├── 09_The_1000_Centers_Mirage_Franchise_Scaling.md
 │       └── 10_The_Gurus_Hostage_Instrumentalization_of_Childhood.md
 ├── scripts/                            # Pipeline de publicación y sindicación masiva
-│   ├── publish_all_essays.py           # Publicador automático a Substack (ProseMirror JSON)
+│   ├── publish_global_dossier.py       # Publicador integral de dossiers globales a Substack y Buffer
+│   ├── publish_all_essays.py           # Publicador automático de serie inicial a Substack
 │   ├── buffer_twitter_publisher.py     # Despachador GraphQL a Twitter / X vía Buffer
 │   └── dispatch_all_platforms.py       # Orquestador multiplataforma
 └── docs/                               # Kits de distribución y guías estratégicas
@@ -54,7 +57,7 @@ NoMoreSmokeCults/
 
 Los ensayos de investigación se publican bajo la autoría de **Clement Vane** (*Independent Scottish environmental philosopher & political ecology essayist*):
 
-* **Substack Principal:** [clementvane.substack.com](https://clementvane.substack.com) (10 Ensayos en vivo)
+* **Substack Principal:** [clementvane.substack.com](https://clementvane.substack.com) (11 Ensayos en vivo)
 * **RSS Feed Canónico:** `https://clementvane.substack.com/feed`
 * **X / Twitter:** [@clementvane](https://x.com/clementvane) (Canal automatizado vía Buffer GraphQL)
 * **Reddit:** [u/ClementVane](https://www.reddit.com/user/ClementVane/)
@@ -64,7 +67,12 @@ Los ensayos de investigación se publican bajo la autoría de **Clement Vane** (
 
 ## 🚀 Uso del Pipeline Automatizado
 
-Para publicar nuevos ensayos en Substack:
+Para publicar nuevos dossiers globales a Substack y Twitter / X:
+```bash
+python3 scripts/publish_global_dossier.py
+```
+
+Para publicar la serie completa de ensayos en Substack:
 ```bash
 python3 scripts/publish_all_essays.py
 ```

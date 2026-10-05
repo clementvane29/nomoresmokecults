@@ -54,6 +54,12 @@ Para maximizar el impacto de las publicaciones de Clement Vane y llegar a las co
 > **Texto de acompañamiento:**  
 > *"A forensic essay by Clement Vane examining how charismatic figures in the alternative ecological movement use 'innate goodness' and DARVO tactics to evade legal accountability, while publicly weaponizing children as spiritual shields and isolating them from conventional education."*
 
+#### Plantilla C: Para r/Collapse, r/Environment, r/CriticalThinking (Dossier Global 01)
+> **Título:** *The Architecture of Modern Eco-Cults: How Post-Doom Prophets, Neo-Shamans, and Green Grifters Weaponize Planetary Crisis*  
+> **Link:** https://clementvane.substack.com/p/the-architecture-of-modern-eco-cults  
+> **Texto de acompañamiento:**  
+> *"From post-doom fatalism and $8,000 unregulated entheogen retreats to feudal land-tithing and ReFi crypto matching rounds: a comprehensive global taxonomy by Clement Vane examining how charismatic eco-grifters convert existential panic into financial extraction, deploy DARVO against civil audits, and evade local governance."*
+
 ---
 
 ### 3. ESPACIOS ADICIONALES PARA MAXIMIZAR EL ALTAVOZ DE FORMA AUTOMÁTICA

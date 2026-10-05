@@ -5,6 +5,18 @@
 
 ### Hilos y Posts Diseñados para X (@clementvane)
 
+#### Global Dossier 01 (Taxonomía Global de Eco-Cultos — EN VIVO)
+> 🚨 NEW: The Architecture of Modern Eco-Cults
+> 
+> How Post-Doom Prophets, Neo-Shamans, and Green Grifters Weaponize Planetary Crisis.
+> 
+> A forensic taxonomy by Clement Vane:
+> https://clementvane.substack.com/p/the-architecture-of-modern-eco-cults
+> 
+> #Ecology #PostDoom #Climate
+
+---
+
 #### Post 1 (Lanzamiento Nuclear — Ensayo 10)
 > 🚨 NEW ESSAY: The Guru’s Hostage: The Instrumentalization of Childhood in the Service of Ecological Grandiosity.
 > 
