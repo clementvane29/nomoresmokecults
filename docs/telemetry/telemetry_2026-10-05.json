@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-05 21:06:19",
+  "reddit": {
+    "subreddit": "r/NoMoreSmokeCults",
+    "stats": {
+      "subscribers": 1,
+      "active_user_count": 0,
+      "status": "OK"
+    },
+    "sample_live_posts": 10,
+    "recent_posts": [
+      "[Global Investigation] The Frontier Grifters: Biodecoding in",
+      "[Global Investigation] The Entheogen Cartels: Neochamanism, ",
+      "[Global Investigation] The Ecovillage Feudalists: Anthroposo"
+    ]
+  },
+  "substack": {
+    "publication": "clementvane.substack.com",
+    "total_live_dossiers": 15
+  },
+  "social_buffer": {
+    "channel": "@clementvane (Twitter)",
+    "queue_status": "InvalidInputError"
+  },
+  "ai_indexing_status": {
+    "manifesto_pinned": true,
+    "flairs_assigned": true,
+    "canonical_backlinks_present": true,
+    "target_keywords_coverage": [
+      "Joseph Allen Brewer",
+      "Earth Regenerators",
+      "Design School for Regenerating Earth",
+      "Bioregional Learning Centers",
+      "Sue\u00f1os del Bosque",
+      "Agro-Messiahs",
+      "Entheogen Cartels"
+    ]
+  }
+}
