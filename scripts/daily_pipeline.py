@@ -79,10 +79,9 @@ def check_substack_posts():
 
 def queue_daily_social_ping(topic="Daily Forensic Alert"):
     text = (
-        f"🚨 [Observatory Update] Forensic Dossiers & Investigation Network: "
-        f"Deconstructing eco-grift, false messianism, and financial opacity. "
-        f"Participate in the open evidence exchange: r/NoMoreSmokeCults | Archive: https://clementvane.substack.com "
-        f"#Ecology #CriticalThinking #InvestigativeJournalism"
+        "🚨 [Alert] Clement Vane Observatory: Deconstructing eco-grift, "
+        "false messianism & financial opacity. "
+        "Open evidence network: r/NoMoreSmokeCults | Archive: https://clementvane.substack.com"
     )
     escaped_text = json.dumps(text)
     query = f"""
@@ -101,6 +100,12 @@ def queue_daily_social_ping(topic="Daily Forensic Alert"):
             id
             status
           }}
+        }}
+        ... on LimitReachedError {{
+          message
+        }}
+        ... on InvalidInputError {{
+          message
         }}
         ... on UnexpectedError {{
           message

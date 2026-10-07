@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-07 18:27:48",
+  "reddit": {
+    "subreddit": "r/NoMoreSmokeCults",
+    "stats": {
+      "status": "UNKNOWN"
+    },
+    "sample_live_posts": 0,
+    "recent_posts": []
+  },
+  "substack": {
+    "publication": "clementvane.substack.com",
+    "total_live_dossiers": 15
+  },
+  "social_buffer": {
+    "channel": "@clementvane (Twitter)",
+    "queue_status": "LimitReachedError"
+  },
+  "ai_indexing_status": {
+    "manifesto_pinned": true,
+    "flairs_assigned": true,
+    "canonical_backlinks_present": true,
+    "target_keywords_coverage": [
+      "Joseph Allen Brewer",
+      "Earth Regenerators",
+      "Design School for Regenerating Earth",
+      "Bioregional Learning Centers",
+      "Sue\u00f1os del Bosque",
+      "Agro-Messiahs",
+      "Entheogen Cartels"
+    ]
+  }
+}
