@@ -20,7 +20,8 @@
 | **Passport Record** | US Citizen Passport Holder | Commercial Filings (Design Institute S.A.S.) |
 | **Colombian Foreign ID** | Valid Alien Registration (Cédula de Extranjería) | Chamber of Commerce Filings |
 | **US Tax ID (SSN)** | Verified IRS Tax Filing Number | Form 1040 Transcripts (2021–2024 on file) |
-| **Commercial Entity (Colombia)**| **DESIGN INSTITUTE FOR REGENERATING EARTH S.A.S.** | NIT 901.375.427-9 (Commercial Matrícula 05-455510-16) |
+| **Territorial Operating Base** | **Barichara, Santander (Colombia)** | Primary field location, land projects, and operational headquarters |
+| **Commercial Entity (Colombia)**| **DESIGN INSTITUTE FOR REGENERATING EARTH S.A.S.** | NIT 901.375.427-9 (Commercial Matrícula 05-455510-16, Bucaramanga / San Gil Chamber of Commerce) |
 | **Corporate Role** | Legal Representative & President (31.0% Shareholder) | General Assembly Minute No. 8 (16/07/2025) |
 | **Co-Founding Associate** | Co-shareholder & Operating Co-Director | Shareholder registry (34.5% equity) |
 | **Former Domestic Partner** | Former Spouse & Co-Founding Shareholder | Shareholder registry (34.5% equity) |
@@ -93,11 +94,11 @@ Brewer’s entire apparatus functions through four distinct mechanisms:
 
 # 🇪🇸 Resumen Judicial y Legal en Español
 
-**Síntesis Forense para Autoridades Competentes:**
-El presente expediente documenta la maniobra transfronteriza de Joseph Allen Brewer consistente en:
-1. **Subdeclaración tributaria ante el IRS** en Estados Unidos entre 2021 y 2023, contrastada con la captación masiva de fondos para proyectos ecológicos en territorio andino.
-2. **Operación irregular de la sociedad comercial Design Institute for Regenerating Earth S.A.S. (NIT 901.375.427-9)**, confesando por escrito la ausencia de nómina y la omisión de aportes parafiscales al sistema de seguridad social integral (PILA).
-3. **Coerción económica y alienación parental**, calificando la atención médica pediátrica y la vacunación obligatoria como actos de agresión para manipular a su menor hija y evadir deberes parentales bajo el pretexto de un "colapso planetario inminente".
+**Síntesis Forense para Autoridades Competentes (Fiscalía General, Comisaría de Familia, DIAN y Jueces de Familia):**
+El presente expediente documenta la maniobra transfronteriza desplegada por Joseph Allen Brewer en el municipio de **Barichara, Santander (Colombia)** y los Estados Unidos, consistente en:
+1. **Subdeclaración tributaria ante el IRS** en Estados Unidos entre 2021 y 2023, contrastada con la captación masiva de fondos y donaciones para compra de tierras en **Barichara, Santander**.
+2. **Operación irregular de la sociedad comercial Design Institute for Regenerating Earth S.A.S. (NIT 901.375.427-9, Barichara)**, confesando por escrito la ausencia de nómina laboral y la omisión continuada de aportes parafiscales al sistema de seguridad social integral (PILA).
+3. **Coerción económica y alienación parental en Barichara**, calificando la atención médica pediátrica y la vacunación obligatoria como actos de agresión para manipular a su menor hija y evadir deberes parentales bajo el pretexto de un "colapso planetario inminente".
 
 ---
 

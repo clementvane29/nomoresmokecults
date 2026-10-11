@@ -1,7 +1,10 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://nomoresmokecults.pages.dev",
-  output: "static"
+  output: "static",
+  integrations: [sitemap()]
 });
+
