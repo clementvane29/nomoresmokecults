@@ -11,15 +11,24 @@ import re
 import os
 import sys
 
+# Cargar .env si existe
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+if os.path.exists(env_path):
+    with open(env_path) as f:
+        for line in f:
+            if '=' in line and not line.strip().startswith('#'):
+                k, v = line.strip().split('=', 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
 # Configuración Substack
 PUB_ID = 11501196
 USER_ID = 556516389
 
 COOKIES = {
-    'substack.sid': 's%3AfgvtSnIdm3_yMNrM6IjWOb7UT8u2weGs.YeXU0WROLYVmMtNTU9ONCjo81JtjA7nTCLSp3qIq%2F08',
-    'substack.lli': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjU1NjUxNjM4OSwiaWF0IjoxNzkxMTM1MDM0LCJleHAiOjE3OTM3MjcwMzQsImF1ZCI6Imxpa2VseS1sb2dnZWQtaW4ifQ.kXzSRKrodRsRVPLvyoOS1XNz175VSZ7WPn3BFBtiHBk'
+    'substack.sid': os.getenv('SUBSTACK_SID', ''),
+    'substack.lli': os.getenv('SUBSTACK_LLI', '')
 }
-COOKIE_HEADER = '; '.join([f'{k}={v}' for k, v in COOKIES.items()])
+COOKIE_HEADER = '; '.join([f'{k}={v}' for k, v in COOKIES.items() if v])
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -30,8 +39,8 @@ HEADERS = {
 }
 
 # Configuración Buffer
-BUFFER_TOKEN = "luGLAxMeGGi2js_38adTpvhmJtMmoG8BNzN6ktd2Wkp"
-TWITTER_CHANNEL_ID = "6ac2e8306a5c39ccb618069d" # @clementvane
+BUFFER_TOKEN = os.getenv("BUFFER_TOKEN", "")
+TWITTER_CHANNEL_ID = os.getenv("BUFFER_TWITTER_CHANNEL_ID", "6ac2e8306a5c39ccb618069d") # @clementvane
 GRAPHQL_URL = "https://api.buffer.com/graphql"
 
 def get_live_posts():

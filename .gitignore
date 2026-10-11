@@ -15,3 +15,9 @@ ENV/
 *.sqlite
 Cookies
 .system_generated/
+
+# Node & Devvit artifacts
+node_modules/
+dist/
+.devvit/
+

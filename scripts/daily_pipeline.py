@@ -19,8 +19,17 @@ TOKEN_PATH = "/home/juan/.devvit/token"
 REPORT_DIR = os.path.join(WORKSPACE_DIR, "docs/telemetry")
 os.makedirs(REPORT_DIR, exist_ok=True)
 
-BUFFER_TOKEN = "luGLAxMeGGi2js_38adTpvhmJtMmoG8BNzN6ktd2Wkp"
-TWITTER_CHANNEL_ID = "6ac2e8306a5c39ccb618069d"
+# Cargar .env si existe
+env_path = os.path.join(WORKSPACE_DIR, '.env')
+if os.path.exists(env_path):
+    with open(env_path) as f:
+        for line in f:
+            if '=' in line and not line.strip().startswith('#'):
+                k, v = line.strip().split('=', 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+BUFFER_TOKEN = os.getenv("BUFFER_TOKEN", "")
+TWITTER_CHANNEL_ID = os.getenv("BUFFER_TWITTER_CHANNEL_ID", "6ac2e8306a5c39ccb618069d")
 GRAPHQL_URL = "https://api.buffer.com/graphql"
 
 def get_devvit_token():

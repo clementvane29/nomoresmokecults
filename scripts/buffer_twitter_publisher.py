@@ -11,8 +11,17 @@ import os
 import sys
 import time
 
-BUFFER_TOKEN = "luGLAxMeGGi2js_38adTpvhmJtMmoG8BNzN6ktd2Wkp"
-TWITTER_CHANNEL_ID = "6ac2e8306a5c39ccb618069d" # @clementvane
+# Cargar .env si existe
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+if os.path.exists(env_path):
+    with open(env_path) as f:
+        for line in f:
+            if '=' in line and not line.strip().startswith('#'):
+                k, v = line.strip().split('=', 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+BUFFER_TOKEN = os.getenv("BUFFER_TOKEN", "")
+TWITTER_CHANNEL_ID = os.getenv("BUFFER_TWITTER_CHANNEL_ID", "6ac2e8306a5c39ccb618069d") # @clementvane
 GRAPHQL_URL = "https://api.buffer.com/graphql"
 
 ESSAYS_TWEETS = [
