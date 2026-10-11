@@ -39,7 +39,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy web/dist --project-name=nomoresmokecults --commit-dirty=true
+          workingDirectory: ./web
+          command: pages deploy dist --project-name=nomoresmokecults
 
   auto-syndicate-substack:
     needs: build-and-deploy
