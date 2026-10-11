@@ -6,7 +6,7 @@ import re
 
 SQLITE_PATH = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Familia JEJ/fb_extraction/data/joe_brewer_posts.sqlite'
 SOLO_FB_DIR = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Familia JEJ/Solo facebook'
-PRUEBAS_DIR = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Caso Joseph/Pruebas'
+PRUEBAS_DIR = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Joe Brewer Benchmark/Pruebas'
 OUTPUT_JSON = '/home/juan/Datos/Datos Juan/ProyectosSoftware/NoMoreSmokeCults/evidence/facebook_audit/JOE_BREWER_PUBLIC_FOOTPRINT_ARCHIVE.json'
 OUTPUT_MD = '/home/juan/Datos/Datos Juan/ProyectosSoftware/NoMoreSmokeCults/evidence/facebook_audit/JOE_BREWER_PUBLIC_FOOTPRINT_ARCHIVE.md'
 

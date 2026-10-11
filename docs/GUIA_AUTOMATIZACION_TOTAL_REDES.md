@@ -22,7 +22,7 @@ Hashnode eliminó el importador RSS en su UI web y bloqueó las consultas anóni
 
 * **Sincronización por GitHub Repo (Markdown Nativo):**
   1. Hashnode permite conectar un repositorio de GitHub para publicar automáticamente mediante commits (`Hashnode Backup / GitHub Integration`).
-  2. Cada archivo `.md` de la carpeta `/home/juan/Datos/Datos Juan/Documentos/his former partner/Caso Joseph/` con frontmatter se sincroniza directamente y Hashnode lo publica al detectar el commit.
+  2. Cada archivo `.md` de la carpeta `/home/juan/Datos/Datos Juan/Documentos/his former partner/Joe Brewer Benchmark/` con frontmatter se sincroniza directamente y Hashnode lo publica al detectar el commit.
   3. Puedes conectar tu repositorio en: `https://hashnode.com/settings/integrations`.
 
 ---

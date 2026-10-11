@@ -125,7 +125,7 @@ def publish_file(filepath, live_titles):
         print(f"Error publishing: {e}")
 
 if __name__ == '__main__':
-    base_dir = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Caso Joseph'
+    base_dir = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Joe Brewer Benchmark'
     live_titles = get_live_posts()
     print(f"Currently live posts count: {len(live_titles)}")
 

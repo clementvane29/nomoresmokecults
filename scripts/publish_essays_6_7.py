@@ -143,7 +143,7 @@ def publish_file(filepath):
         print(f"HTTPError publishing draft: {e.code} - {e.read().decode('utf-8')}")
 
 if __name__ == '__main__':
-    base_dir = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Caso Joseph'
+    base_dir = '/home/juan/Datos/Datos Juan/Documentos/his former partner/Joe Brewer Benchmark'
     files_to_publish = [
         os.path.join(base_dir, '06_The_Anatomy_of_Cosmic_Victimhood.md'),
         os.path.join(base_dir, '07_The_Nomadic_Gaslight_Sowing_Seeds_Burning_Bridges.md')
