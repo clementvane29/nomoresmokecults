@@ -1,0 +1,545 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getAllArticles } from "../lib/content";
+
+const articles = getAllArticles();
+
+// Sort: Feature key Joe Brewer chapters first, then global roster
+const featured = articles.find(a => a.slug.includes("01-the-pseudoscience-of-managing-planetary-collapse")) || articles[0];
+const benchmarkArticles = articles.filter(a => a.category === "Benchmark Dossier" && a.slug !== featured.slug);
+const globalArticles = articles.filter(a => a.category !== "Benchmark Dossier" && a.slug !== featured.slug);
+---
+
+<BaseLayout title="Home of Open-Source Investigations into Eco-Cults">
+  <div class="homepage-container">
+    <!-- HERO INVESTIGATION (Bellingcat Style) -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="kicker">
+            <span class="badge red">BENCHMARK INVESTIGATION</span>
+            <span class="dot">•</span>
+            <span class="kicker-date">{featured.date}</span>
+            <span class="dot">•</span>
+            <span class="read-time">{featured.readingTime}</span>
+          </div>
+
+          <h1 class="hero-title">
+            <a href={`/investigations/${featured.slug}/`}>{featured.title}</a>
+          </h1>
+
+          <p class="hero-excerpt">
+            {featured.excerpt}
+          </p>
+
+          <div class="byline-box">
+            <div class="author-avatar">CV</div>
+            <div class="author-meta">
+              <span class="author-name">By <strong>{featured.author}</strong></span>
+              <span class="author-desk">{featured.authorRole}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="visual-header">
+              <span class="mono-label">EVIDENCE DOSSIER REF: NMSC-001</span>
+              <span class="status-live">● VERIFIED PUBLIC RECORD</span>
+            </div>
+            <div class="visual-body">
+              <div class="evidence-stat">
+                <span class="stat-number">668</span>
+                <span class="stat-label">Archived Public Posts Audited (2018–2026)</span>
+              </div>
+              <div class="evidence-stat">
+                <span class="stat-number">10</span>
+                <span class="stat-label">Critical Epistemic Deconstructions</span>
+              </div>
+              <div class="evidence-stat">
+                <span class="stat-number">8</span>
+                <span class="stat-label">International Jurisdictions Mapped</span>
+              </div>
+              <div class="visual-callout">
+                "Dismantling green saviorism, complexity jargon weaponization, and corporate franchise scaling masquerading as planetary regeneration."
+              </div>
+            </div>
+            <div class="visual-footer">
+              <a href={`/investigations/${featured.slug}/`} class="btn-read-dossier">Read Complete Benchmark Investigation →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENCHMARK SERIES: JOSEPH ALLEN BREWER -->
+    <section id="benchmark" class="section-container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Benchmark Case: Joseph Allen Brewer</h2>
+          <span class="section-subtitle">Earth Regenerators, Design School, BLCs & Delaware 501(c)(3) Audit Series</span>
+        </div>
+        <div class="section-meta-count">10 Detailed Chapters</div>
+      </div>
+
+      <div class="articles-grid">
+        {benchmarkArticles.map((art) => (
+          <article class="article-card">
+            <div class="card-meta">
+              <span class="card-cat">{art.category}</span>
+              <span class="dot">•</span>
+              <span class="card-time">{art.readingTime}</span>
+            </div>
+            <h3 class="card-title">
+              <a href={`/investigations/${art.slug}/`}>{art.title}</a>
+            </h3>
+            <p class="card-excerpt">{art.excerpt}</p>
+            <div class="card-footer">
+              <span class="card-byline">By {art.author}</span>
+              <a href={`/investigations/${art.slug}/`} class="card-arrow">Read Dossier →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- GLOBAL INVESTIGATION ROSTER & FIELD DOSSIERS -->
+    <section id="global" class="section-container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Global Investigation Roster & International Enclaves</h2>
+          <span class="section-subtitle">Comparative Intelligence across USA, Europe, Latin America, and Patagonia</span>
+        </div>
+        <div class="section-meta-count">{globalArticles.length} Dossiers Available</div>
+      </div>
+
+      <div class="articles-grid">
+        {globalArticles.map((art) => (
+          <article class="article-card global-card">
+            <div class="card-meta">
+              <span class="card-cat highlight-cat">{art.category}</span>
+              <span class="dot">•</span>
+              <span class="card-jurisdiction">{art.jurisdiction}</span>
+            </div>
+            <h3 class="card-title">
+              <a href={`/investigations/${art.slug}/`}>{art.title}</a>
+            </h3>
+            <p class="card-excerpt">{art.excerpt}</p>
+            <div class="card-footer">
+              <span class="card-byline">By {art.author}</span>
+              <a href={`/investigations/${art.slug}/`} class="card-arrow">Read Dossier →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- METHODOLOGY & CRYPTOGRAPHIC EVIDENCE -->
+    <section id="evidence" class="methodology-banner">
+      <div class="methodology-content">
+        <h3>Forensic Methodology & Cryptographic Vault</h3>
+        <p>
+          Every quote, assertion, and audit published by the <strong>NoMoreSmokeCults</strong> desk corresponds to cryptographically hashed records from corporate registries, published ISBN literature, archived public social footprints, and financial match rounds.
+        </p>
+        <div class="methodology-actions">
+          <a href="https://github.com/clementvane29/nomoresmokecults/tree/main/evidence" target="_blank" class="btn-dark">
+            Inspect Cryptographic Hashes on GitHub ↗
+          </a>
+          <a href="https://clementvane.substack.com" target="_blank" class="btn-outline">
+            Subscribe to Clement Vane on Substack ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .homepage-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    border-bottom: 2px solid #222222;
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 50px;
+    align-items: stretch;
+  }
+
+  @media (max-width: 990px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888888;
+    margin-bottom: 18px;
+  }
+
+  .badge.red {
+    background: var(--accent-red);
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 0.72rem;
+    font-weight: 800;
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: 2.6rem;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  .hero-title a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .hero-title a:hover {
+    color: #cccccc;
+  }
+
+  .hero-excerpt {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+  }
+
+  .byline-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 18px;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    background: #222222;
+    border: 1px solid #444444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-family: var(--font-mono);
+  }
+
+  .author-meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+  }
+
+  .author-name {
+    color: #ffffff;
+  }
+
+  .author-desk {
+    color: #777777;
+    font-size: 0.78rem;
+  }
+
+  /* Visual Card / Forensic Vault */
+  .visual-card {
+    background: #0a0a0a;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .visual-header {
+    background: #141414;
+    border-bottom: 1px solid #222222;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    color: #888888;
+  }
+
+  .status-live {
+    color: #00ff66;
+    font-weight: 700;
+  }
+
+  .visual-body {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .evidence-stat {
+    border-left: 3px solid var(--accent-red);
+    padding-left: 14px;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: #ffffff;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .visual-callout {
+    background: #111111;
+    border-left: 3px solid #ff4500;
+    padding: 16px;
+    font-size: 0.95rem;
+    color: #cccccc;
+    font-style: italic;
+    font-family: var(--font-serif);
+  }
+
+  .visual-footer {
+    padding: 16px 20px;
+    background: #111111;
+    border-top: 1px solid #222222;
+  }
+
+  .btn-read-dossier {
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-read-dossier:hover {
+    background: #dddddd;
+  }
+
+  /* Section Styles */
+  .section-container {
+    margin-bottom: 70px;
+  }
+
+  .section-header {
+    border-bottom: 2px solid #222222;
+    padding-bottom: 14px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+
+  .section-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 4px;
+  }
+
+  .section-meta-count {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    text-transform: uppercase;
+  }
+
+  /* Articles Grid */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 30px;
+  }
+
+  @media (max-width: 640px) {
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .article-card {
+    background: #0d0d0d;
+    border: 1px solid #1c1c1c;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+
+  .article-card:hover {
+    border-color: #333333;
+    transform: translateY(-2px);
+  }
+
+  .card-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777777;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .card-cat {
+    color: #bbbbbb;
+  }
+
+  .highlight-cat {
+    color: #ff5555;
+  }
+
+  .card-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .card-title a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-title a:hover {
+    color: #ff4500;
+  }
+
+  .card-excerpt {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #888888;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .card-footer {
+    border-top: 1px solid #181818;
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+  }
+
+  .card-byline {
+    color: #666666;
+    font-weight: 600;
+  }
+
+  .card-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .card-arrow:hover {
+    color: var(--accent-red);
+  }
+
+  /* Methodology Banner */
+  .methodology-banner {
+    background: #080808;
+    border: 1px solid #222222;
+    padding: 40px;
+    border-left: 6px solid var(--accent-red);
+  }
+
+  .methodology-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+
+  .methodology-content p {
+    color: #999999;
+    max-width: 900px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .methodology-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-dark {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .btn-outline {
+    border: 1px solid #444444;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+</style>

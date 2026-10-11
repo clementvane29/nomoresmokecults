@@ -40,7 +40,18 @@ FLAIRS = {
     'support': '2728c666-c061-11f1-959b-7eed91c785cf'      # Discussion & Support
 }
 
+def check_subreddit_available():
+    r = requests.get(f'https://oauth.reddit.com/r/{SUBREDDIT}/about', headers=HEADERS)
+    if r.status_code == 404:
+        err = r.json()
+        if err.get('reason') == 'banned':
+            print(f"[ERROR CRÍTICO] r/{SUBREDDIT} está actualmente BANEADO por Reddit ({err}). Abortando publicación para proteger la cuenta.")
+            return False
+    return r.status_code == 200
+
 def get_existing_post_titles():
+    if not check_subreddit_available():
+        return set()
     r = requests.get(f'https://oauth.reddit.com/r/{SUBREDDIT}/new', headers=HEADERS, params={'limit': 100})
     if r.status_code == 200:
         data = r.json()
@@ -49,6 +60,9 @@ def get_existing_post_titles():
     return set()
 
 def post_dossier(title, text, flair_id, substack_url=None):
+    if not check_subreddit_available():
+        print(f"[ABORT] No se puede publicar '{title[:40]}': r/{SUBREDDIT} no está accesible o está baneado.")
+        return None
     existing = get_existing_post_titles()
     if title.lower().strip() in existing:
         print(f"[SKIP] Post already live: {title[:50]}...")

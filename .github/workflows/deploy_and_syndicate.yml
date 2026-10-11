@@ -1,0 +1,63 @@
+name: Deploy Cloudflare Pages & Auto-Syndicate to Substack
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "investigations/**"
+      - "web/**"
+      - "README.md"
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build Website & Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install Web Dependencies
+        working-directory: ./web
+        run: npm ci
+
+      - name: Build Astro Static Site
+        working-directory: ./web
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy web/dist --project-name=nomoresmokecults --commit-dirty=true
+
+  auto-syndicate-substack:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    name: Auto-Syndicate New Investigations to Substack & Twitter
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Auto-Syndication Engine
+        env:
+          SUBSTACK_SID: ${{ secrets.SUBSTACK_SID }}
+          SUBSTACK_LLI: ${{ secrets.SUBSTACK_LLI }}
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+          BUFFER_TWITTER_CHANNEL_ID: ${{ secrets.BUFFER_TWITTER_CHANNEL_ID }}
+        run: |
+          python3 scripts/publish_global_dossier.py

@@ -1,0 +1,316 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = "the home of online ecological and cultic investigations",
+  ogImage = "https://clementvane.substack.com/banner.png"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} - NoMoreSmokeCults</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@clementvane" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style is:global>
+    :root {
+      --bg-black: #000000;
+      --bg-card: #0d0d0d;
+      --bg-light: #f5f5f5;
+      --text-white: #ffffff;
+      --text-dim: #999999;
+      --text-dark: #1a1a1a;
+      --accent-red: #ff0000;
+      --accent-orange: #ff4500;
+      --accent-yellow: #fff1ce;
+      --border-gray: #222222;
+      --border-light: #e5e5e5;
+      --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: "IBM Plex Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-mono: "IBM Plex Mono", Menlo, Monaco, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* Top Utility Bar */
+    .utility-bar {
+      border-bottom: 1px solid #1a1a1a;
+      background: #000000;
+      padding: 8px 30px;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #888888;
+      font-weight: 600;
+    }
+
+    .utility-bar a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .utility-bar a:hover {
+      color: #ffffff;
+    }
+
+    /* Main Navigation Header (Bellingcat Aesthetic) */
+    .site-header {
+      background: #000000;
+      border-bottom: 2px solid #222222;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 30px;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .logo-badge {
+      background: #ffffff;
+      color: #000000;
+      font-weight: 900;
+      font-size: 0.9rem;
+      letter-spacing: -0.05em;
+      padding: 4px 8px;
+      border-radius: 2px;
+      font-family: var(--font-mono);
+    }
+
+    .logo-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .logo-tagline {
+      font-size: 0.75rem;
+      color: #888888;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .logo-tagline {
+        display: inline;
+        border-left: 1px solid #333333;
+        padding-left: 14px;
+        margin-left: 4px;
+      }
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-item a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.15s ease;
+    }
+
+    .nav-item a:hover,
+    .nav-item a.active {
+      color: #ffffff;
+    }
+
+    .nav-item.highlight a {
+      background: var(--accent-red);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 2px;
+      font-weight: 700;
+    }
+
+    .nav-item.highlight a:hover {
+      background: #cc0000;
+    }
+
+    /* Footer (Bellingcat Aesthetic) */
+    .site-footer {
+      background: #080808;
+      border-top: 1px solid #222222;
+      padding: 60px 30px 40px;
+      margin-top: 80px;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .footer-col p {
+      color: #888888;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: #aaaaaa;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #666666;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="utility-bar">
+    <div>
+      <span>THE HOME OF ONLINE OPEN-SOURCE INVESTIGATIONS INTO ECO-CULTS & GREENWASHING</span>
+    </div>
+    <div>
+      <a href="https://clementvane.substack.com" target="_blank" rel="noopener">Substack Dispatches ↗</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/clementvane29/nomoresmokecults" target="_blank" rel="noopener">GitHub Archive ↗</a>
+      &nbsp;|&nbsp;
+      <a href="https://x.com/clementvane" target="_blank" rel="noopener">@clementvane ↗</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="logo-container">
+        <span class="logo-badge">NMSC</span>
+        <span class="logo-text">NoMoreSmokeCults</span>
+        <span class="logo-tagline">Forensic Intelligence Desk</span>
+      </a>
+
+      <nav>
+        <ul class="main-nav">
+          <li class="nav-item"><a href="/">Investigations</a></li>
+          <li class="nav-item"><a href="/#benchmark">Joe Brewer Benchmark</a></li>
+          <li class="nav-item"><a href="/#global">Global Roster</a></li>
+          <li class="nav-item"><a href="/#evidence">Evidence Vault</a></li>
+          <li class="nav-item highlight"><a href="https://clementvane.substack.com/subscribe" target="_blank">Subscribe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>NoMoreSmokeCults</h4>
+        <p>
+          An independent open-source investigation desk led by <strong>Clement Vane</strong>. 
+          Deconstructing pseudoscientific scams, messianic eco-gurus, and patriarchal spiritual grifters through rigorous, data-driven political ecology, corporate filings, and open-source forensic discourse analysis.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Investigation Desks</h4>
+        <ul>
+          <li><a href="/#benchmark">Benchmark Case: Joseph Allen Brewer (USA/Colombia)</a></li>
+          <li><a href="/#global">Target 01: Post-Doom Agro-Messiahs (USA)</a></li>
+          <li><a href="/#global">Target 02: Ecovillage Feudalists & Anthroposophy (Europe)</a></li>
+          <li><a href="/#global">Target 03: Entheogen Cartels & Plant Medicine (LatAm)</a></li>
+          <li><a href="/#global">Target 04: The Patagonian Redoubt & Loteos Brujos (Chile)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Open Sourcing & Verification</h4>
+        <p>
+          All dossiers contained on this platform derive strictly from verifiable public domain records, registered ISBN publications, corporate and tax registries, archived social media footprints, and official indigenous authority communiqués.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 NoMoreSmokeCults. Published under Open Evidence & Public Interest Fair Use.</div>
+      <div>Maintained by Clement Vane. Built for Cloudflare Pages.</div>
+    </div>
+  </footer>
+</body>
+</html>

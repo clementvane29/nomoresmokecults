@@ -58,6 +58,10 @@ def check_reddit_health(access_token):
                 'active_user_count': data.get('active_user_count', 0),
                 'status': 'OK'
             }
+        elif r.status_code == 404:
+            err = r.json()
+            if err.get('reason') == 'banned':
+                return {'status': 'BANNED', 'reason': err.get('message', 'Subreddit banned')}
     except Exception as e:
         return {'status': f'ERROR: {e}'}
     return {'status': 'UNKNOWN'}
